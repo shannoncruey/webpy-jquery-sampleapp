@@ -1,0 +1,29 @@
+$def with ()
+$var jsfiles:
+$var cssfiles:
+
+<div>
+	<p>
+		This sample app demonstrates how to deliver an HTML/jQuery web application, served by Python using web.py.
+	</p>
+	<p>
+		A few notable items:
+		<ul>
+			<li>
+				jQuery is not included in this source, rather referenced from Google Code.  (Change the header in base.html if you download a local copy.)
+			</li>
+			<li>
+				This will not be a general demonstration of 'all things jQuery', nor is it intended to be a 'how to' for building a web application.  The purpose of this application is to demonstrate specific examples of commonly asked questions in the web.py community.
+			</li>
+			<li>Code is arranged in a typical fashion, attempting to follow best practice of code separation.  There is no script in the HTML files, and (except for noted examples), ajax methods return JSON data instead of HTML markup.</li>
+		</ul>
+	</p>
+</div>
+<hr />
+Most pages in this app (including this one) are delivered using web.py templates and the 'render' method.  However, keeping with the spirit of jQuery and Ajax, web.py templates aren't used beyond delivery of the page.  Content is dynamic... that's the point!
+<h3>Examples</h3>
+<ul>
+	<li>
+		<a href="/ajaxdropdowns">An example of dropdown boxes populated by ajax.</a>
+	</li>
+</ul>

@@ -1,0 +1,37 @@
+$def with ()
+$var jsfiles: ajaxdropdowns.js
+$var cssfiles:
+
+<p>
+	On initial load, this page has static content defined in the 'countries' dropdown.
+</p>
+<p>
+	Selecting a country will perform three ajax calls:
+	<ol>
+		<li>
+			The 'Regions from JSON' picker is populated using JSON and Javascript
+		</li>
+		<li>
+			The 'Regions from HTML' picker is populated using HTML from the server
+		</li>
+		<li>
+			A generic message is returned from the server.
+		</li>
+	</ol>
+</p>
+<hr />
+Countries: 
+<select id='countries'>
+	<option value="" selected="selected">--Pick One--</option>
+	<option value="Canada">Canada</option>
+	<option value="USA">USA</option>
+</select>
+
+Regions from JSON: <select id='regions'></select>
+
+Regions from HTML: <select id='regions2'></select>
+
+<hr>
+
+<div id="coolstuff"></div>
+

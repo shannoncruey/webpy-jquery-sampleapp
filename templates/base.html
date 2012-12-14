@@ -1,0 +1,47 @@
+$def with (content)
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>web.py - jQuery</title>
+		<link rel="shorcut icon" href="static/images/favicon.png" />
+		<!-- Imp CSS -->
+		<link type="text/css" href="static/style/main.css" rel="stylesheet" />
+		<!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		<!-- Javascript -->
+        <script src="static/script/base.js"></script>
+
+		<!--Any .js files defined on the content page.-->
+$if content.jsfiles:
+	$for f in content.jsfiles.split():
+		<script type="text/javascript" src="static/script/$f"></script>
+
+		<!--Any .css files defined on the content page.-->
+$if content.cssfiles:
+	$for f in content.cssfiles.split():
+		<link type="text/css" href="static/style/$f" rel="stylesheet" />
+
+	</head>
+	<body>
+		<div id="app_header" class="ui-widget-header blur">
+			<div id="app_header_logo" class="floatleft pointer"></div>
+			<div id="app_header_title" class="floatleft">web.py + jQuery Examples</div>
+			<div id="app_header_icons" class="floatright">
+				<img id="settings_btn" class="pointer" src="static/images/settings_24.png" alt="Settings" title="Settings" >
+			</div>
+		</div>
+		<div id="app_footer" class="ui-widget-header blur">
+			<div id="app_version" class="floatleft" style="margin-left: 10px;">
+				&copy; 2012 your company
+			</div>
+			<div id="app_version" class="floatright" style="margin-right: 10px;"></div>
+		</div>
+		<div id="fullwidthcontent" class="min900px">
+			<!-- This is the MAIN Content section. -->
+$:content
+			<!--  End MAIN Content section. -->
+		</div>
+	</body>
+</html>

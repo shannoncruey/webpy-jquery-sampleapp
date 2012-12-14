@@ -1,0 +1,98 @@
+body {
+    height: 100%;
+    max-height: 100%;
+    padding: 0px 10px 10px 10px;
+    margin: 0px;
+    border: 0;
+    background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+#content {
+    /*overflow: auto;*/
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    left: 200px;
+    right: 2px;
+    padding-left: 10px;
+}
+#content table {
+    margin-top: 6px;
+}
+* html #content {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    z-index: -1;
+    border-top: 39px solid #f0f0f0; /*border-bottom: 20px solid #f0f0f0;*/
+    border-left: 200px solid #f0f0f0;
+}
+#fullwidthcontent {
+    padding-top: 60px;
+}
+.pointer {
+    cursor: pointer;
+}
+/*for floats*/
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.clearfloat {
+    clear: both;
+}
+
+#maincontent {
+    margin-left: 60px;
+    margin-bottom: 30px;
+    overflow: auto;
+}
+#app_header {
+    box-shadow: 4px 2px 4px #555555;
+    left: 0;
+    top: 0;
+    margin-bottom: 10px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+#app_header_logo {
+    background-image: url('/static/images/header-logo.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 50px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+#app_header_title {
+    text-align: center;
+    font-size: 1.5em;
+    width: 80%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+#app_header_icons {
+    position: fixed;
+    right: 10px;
+    padding-top: 12px;
+}
+#app_footer {
+    height: 18px;
+    font-weight: normal;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
